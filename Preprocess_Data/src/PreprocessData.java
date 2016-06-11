@@ -37,10 +37,6 @@ public class PreprocessData {
 
 	public static void main(String[] args) throws IOException {
 
-		// Variable to keep track of how many people did a resit that is
-		// unaccounted for
-		int secondresits = 0;
-
 		// Initialise the sparsity matrices to be completely zero
 		for (int i = 0; i < 500; i++) {
 			for (int j = 0; j < 150; j++) {
@@ -133,7 +129,6 @@ public class PreprocessData {
 		dbw.close();
 		sbw.close();
 
-		// System.out.println("Number of third Resits: " + secondresits);
 	}
 
 	// Method to parse a String into a type Date
