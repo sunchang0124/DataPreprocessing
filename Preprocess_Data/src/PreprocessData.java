@@ -59,6 +59,10 @@ public class PreprocessData {
 			grade = parts[2];
 			date = parts[3];
 
+			// Insert method to filter out courses that are NOT considered for this project
+			if (filter(course)) {
+				break;
+			}
 			// Print line to check if the input file is parsed correctly
 			// System.out.println(student + "\t" + course + "\t" + grade + "\t"
 			// + date);
@@ -142,5 +146,16 @@ public class PreprocessData {
 			System.out.println("Unparseable using " + ft);
 		}
 		return parsedDate;
+	}
+	
+	static boolean filter(String course) {
+		// If course is not from DKE, but from another faculty, do not consider it
+		if (!course.contains("KEN")) {
+			return true;
+		} else {
+			return false;
+		}
+		
+		// Maybe more filters should be added
 	}
 }
