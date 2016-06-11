@@ -98,8 +98,9 @@ public class PreprocessData {
 				data[studentIndex][courseIndex] = grade;
 				dataSparsity[studentIndex][courseIndex] = 1;
 			} else {
+				// TODO: This is a RESIT
 				// Student needs to be added to the end of the list, and all courses need to be filled in again
-				// Except resits, they need to be edited
+				// Former grade needs to be replaced with the resit grade
 			}
 		}
 		input.close();
