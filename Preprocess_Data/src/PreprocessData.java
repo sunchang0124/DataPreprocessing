@@ -94,7 +94,13 @@ public class PreprocessData {
 			}
 
 			// Put the info from the file in the right place within data
-
+			if (dataSparsity[studentIndex][courseIndex] == 0) {
+				data[studentIndex][courseIndex] = grade;
+				dataSparsity[studentIndex][courseIndex] = 1;
+			} else {
+				// Student needs to be added to the end of the list, and all courses need to be filled in again
+				// Except resits, they need to be edited
+			}
 		}
 		input.close();
 
