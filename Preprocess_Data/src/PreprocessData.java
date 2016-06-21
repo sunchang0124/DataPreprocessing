@@ -135,6 +135,11 @@ public class PreprocessData {
 		}
 
 		ArrayList<Date> cutoffPoints = new ArrayList<Date>();
+		cutoffPoints.add(new Date(110, 1, 20));
+		cutoffPoints.add(new Date(110, 3, 20));
+		cutoffPoints.add(new Date(110, 6, 10));
+		cutoffPoints.add(new Date(110, 9, 10));
+		
 		cutoffPoints.add(new Date(111, 1, 20));
 		cutoffPoints.add(new Date(111, 3, 20));
 		cutoffPoints.add(new Date(111, 6, 10));
